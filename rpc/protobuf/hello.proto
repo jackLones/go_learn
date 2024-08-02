@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+option go_package = "./sayService";
+
+service sayService {
+  rpc SayHello(HelloRequest) returns (HelloRes);
+}
+service sayService1 {
+  rpc SayHello1(HelloRequest) returns (HelloRes);
+}
+
+message HelloRequest {
+  string name = 1;
+}
+
+message HelloRes {
+  string message = 1;
+}
